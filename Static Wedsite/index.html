@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olive's Space — Modern Fashion & Apparel</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo">OLIVE'S SPACE</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="products.html" class="nav-cta">Shop Now</a>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="products.html" class="mobile-cta">Shop Now</a>
+  </div>
+
+  <!-- ===== HERO CAROUSEL ===== -->
+  <section class="carousel" id="carousel">
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- Slide 1 -->
+      <div class="carousel-slide">
+        <img src="images/carousel-1.jpg" alt="Autumn Collection" class="slide-bg"/>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">New Arrival — 2026</span>
+          <h1 class="slide-title">Autumn <em>Luxe</em><br/>Collection</h1>
+          <p class="slide-sub">Timeless pieces crafted for the modern woman. Elegance in every thread.</p>
+          <div class="slide-cta">
+            <a href="products.html" class="btn-white">Explore Collection</a>
+            <a href="about.html" class="btn-outline-white">Our Story</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <img src="images/carousel-2.jpg" alt="Formal Wear" class="slide-bg"/>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">Executive Edit</span>
+          <h1 class="slide-title">Dress for<br/><em>Power</em></h1>
+          <p class="slide-sub">From boardroom confidence to weekend refinement — own every room you enter.</p>
+          <div class="slide-cta">
+            <a href="products.html" class="btn-white">Shop Formal</a>
+            <a href="contact.html" class="btn-outline-white">Custom Orders</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <img src="images/carousel-3.jpg" alt="Accessories" class="slide-bg"/>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">Accessories</span>
+          <h1 class="slide-title">The Art of<br/><em>Detail</em></h1>
+          <p class="slide-sub">Because the right accessory changes everything. Discover our curated edit.</p>
+          <div class="slide-cta">
+            <a href="products.html" class="btn-white">View Accessories</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-slide">
+        <img src="images/carousel-4.jpg" alt="Shopping" class="slide-bg"/>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">Season Sale</span>
+          <h1 class="slide-title">Style Without<br/><em>Compromise</em></h1>
+          <p class="slide-sub">Premium fashion at honest prices. Shop our end-of-season selection today.</p>
+          <div class="slide-cta">
+            <a href="products.html" class="btn-white">Shop the Sale</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arrows -->
+    <button class="carousel-arrow prev" id="prevBtn">&#8592;</button>
+    <button class="carousel-arrow next" id="nextBtn">&#8594;</button>
+
+    <!-- Dots -->
+    <div class="carousel-dots" id="carouselDots">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+      <button class="dot" data-index="3"></button>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <strong>120+</strong><span>Pieces This Season</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <strong>3,000+</strong><span>Happy Clients</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <strong>15+</strong><span>Countries Shipped</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <strong>5★</strong><span>Average Rating</span>
+    </div>
+  </div>
+
+  <!-- ===== FEATURED CATEGORIES ===== -->
+  <section class="categories-section">
+    <div class="categories-header fade-in">
+      <span class="section-tag">Browse by Category</span>
+      <h2 class="section-title">Shop the Look</h2>
+    </div>
+    <div class="categories-grid">
+      <a href="products.html" class="cat-card large fade-in">
+        <img src="images/cat-dresses.jpg" alt="Dresses"/>
+        <div class="cat-overlay">
+          <span class="cat-label">Dresses</span>
+          <span class="cat-count">24 pieces</span>
+        </div>
+      </a>
+      <div class="cat-col">
+        <a href="products.html" class="cat-card fade-in">
+          <img src="images/cat-outerwear.jpg" alt="Outerwear"/>
+          <div class="cat-overlay">
+            <span class="cat-label">Outerwear</span>
+            <span class="cat-count">18 pieces</span>
+          </div>
+        </a>
+        <a href="products.html" class="cat-card fade-in">
+          <img src="images/cat-accessories.jpg" alt="Accessories"/>
+          <div class="cat-overlay">
+            <span class="cat-label">Accessories</span>
+            <span class="cat-count">36 pieces</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section class="featured-section">
+    <div class="featured-header fade-in">
+      <div>
+        <span class="section-tag">Hand-Picked</span>
+        <h2 class="section-title">Featured Pieces</h2>
+      </div>
+      <a href="products.html" class="btn-outline">View All</a>
+    </div>
+    <div class="products-grid-home">
+
+      <div class="product-card fade-in">
+        <div class="product-img">
+          <img src="images/product-trench.jpg" alt="Classic Trench Coat"/>
+          <span class="product-badge-tag">New</span>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Outerwear</p>
+          <p class="product-name">Classic Trench Coat</p>
+          <div class="product-bottom">
+            <span class="product-price">18,000.00FCFA</span>
+            <button class="product-add">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in">
+        <div class="product-img">
+          <img src="images/product-dress.jpg" alt="Linen Wrap Dress"/>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Dresses</p>
+          <p class="product-name">Linen Wrap Dress</p>
+          <div class="product-bottom">
+            <span class="product-price">12,000.00FCFA</span>
+            <button class="product-add">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in">
+        <div class="product-img">
+          <img src="images/product-blazer.jpg" alt="Tailored Blazer"/>
+          <span class="product-badge-tag">New</span>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Formal</p>
+          <p class="product-name">Tailored Blazer</p>
+          <div class="product-bottom">
+            <span class="product-price">21,500.00FCFA</span>
+            <button class="product-add">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card fade-in">
+        <div class="product-img">
+          <img src="images/product-tote.jpg" alt="Structured Tote"/>
+          <span class="product-badge-tag gold">Best Seller</span>
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Accessories</p>
+          <p class="product-name">Structured Tote Bag</p>
+          <div class="product-bottom">
+            <span class="product-price">14,500.00FCFA</span>
+            <button class="product-add">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== BANNER CTA ===== -->
+  <section class="banner-cta">
+    <img src="images/banner-cta.jpg" alt="Banner" class="banner-bg"/>
+    <div class="banner-overlay"></div>
+    <div class="banner-content fade-in">
+      <span class="section-tag" style="color:rgba(255,255,255,0.7);">Limited Time</span>
+      <h2 class="banner-title">New Season.<br/><em>New You.</em></h2>
+      <p class="banner-sub">Free shipping on all orders above 100,000FCFA. Shop the new arrivals now.</p>
+      <a href="products.html" class="btn-white">Discover Now</a>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section">
+    <div class="test-header fade-in">
+      <span class="section-tag">Reviews</span>
+      <h2 class="section-title">What our clients say</h2>
+      <p class="section-sub">Real reviews from real women who love Olive's Space.</p>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card fade-in">
+        <div class="test-top">
+          <div class="stars">★★★★★</div>
+          <span class="test-date">March 2026</span>
+        </div>
+        <p class="testimonial-text">"The quality is exceptional. My trench coat from Olive's Space gets compliments every time I wear it. Truly timeless pieces."</p>
+        <div class="testimonial-author">
+          <img src="images/avatar-amara.jpg" alt="Amara" class="author-img"/>
+          <div>
+            <p class="author-name">Amara M.</p>
+            <p class="author-loc">Lagos, Nigeria</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="test-top">
+          <div class="stars">★★★★★</div>
+          <span class="test-date">February 2026</span>
+        </div>
+        <p class="testimonial-text">"Fast shipping and beautifully packaged. The linen wrap dress fits perfectly and the fabric is so breathable — I ordered two more colours."</p>
+        <div class="testimonial-author">
+          <img src="images/avatar-sophie.jpg" alt="Sophie" class="author-img"/>
+          <div>
+            <p class="author-name">Sophie B.</p>
+            <p class="author-loc">Paris, France</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="test-top">
+          <div class="stars">★★★★★</div>
+          <span class="test-date">April 2026</span>
+        </div>
+        <p class="testimonial-text">"Olive's Space has redefined my wardrobe. The structured tote is both stylish and functional — I reach for it every single day."</p>
+        <div class="testimonial-author">
+          <img src="images/avatar-nadia.jpg" alt="Nadia" class="author-img"/>
+          <div>
+            <p class="author-name">Nadia K.</p>
+            <p class="author-loc">Nairobi, Kenya</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="test-top">
+          <div class="stars">★★★★★</div>
+          <span class="test-date">January 2026</span>
+        </div>
+        <p class="testimonial-text">"I wore the tailored blazer to a conference and had so many people ask where I bought it. The fit is immaculate. Worth every penny."</p>
+        <div class="testimonial-author">
+          <img src="images/avatar-chioma.jpg" alt="Chioma" class="author-img"/>
+          <div>
+            <p class="author-name">Chioma E.</p>
+            <p class="author-loc">Abuja, Nigeria</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="test-top">
+          <div class="stars">★★★★★</div>
+          <span class="test-date">March 2026</span>
+        </div>
+        <p class="testimonial-text">"Customer service is outstanding. I needed a size exchange and it was handled within 48 hours. Love this brand and will keep coming back."</p>
+        <div class="testimonial-author">
+          <img src="images/avatar-leila.jpg" alt="Leila" class="author-img"/>
+          <div>
+            <p class="author-name">Leila R.</p>
+            <p class="author-loc">Dubai, UAE</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="test-top">
+          <div class="stars">★★★★★</div>
+          <span class="test-date">April 2026</span>
+        </div>
+        <p class="testimonial-text">"The cashmere scarf is incredibly soft and luxurious. You can tell these items are made with care. Olive's Space is now my go-to fashion brand."</p>
+        <div class="testimonial-author">
+          <img src="images/avatar-isabelle.jpg" alt="Isabelle" class="author-img"/>
+          <div>
+            <p class="author-name">Isabelle D.</p>
+            <p class="author-loc">Lyon, France</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== INSTAGRAM STRIP ===== -->
+  <section class="insta-section">
+    <div class="insta-header fade-in">
+      <span class="section-tag">Follow Us</span>
+      <h2 class="section-title">@olivesspace</h2>
+    </div>
+    <div class="insta-grid">
+      <a href="#" class="insta-item fade-in"><img src="images/insta-1.jpg" alt="Instagram"/></a>
+      <a href="#" class="insta-item fade-in"><img src="images/insta-2.jpg" alt="Instagram"/></a>
+      <a href="#" class="insta-item fade-in"><img src="images/insta-3.jpg" alt="Instagram"/></a>
+      <a href="#" class="insta-item fade-in"><img src="images/insta-4.jpg" alt="Instagram"/></a>
+      <a href="#" class="insta-item fade-in"><img src="images/insta-5.jpg" alt="Instagram"/></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">OLIVE'S SPACE</a>
+        <p>Modern fashion for the confident woman. Quality pieces crafted for every occasion, shipped worldwide from Yaoundé, Cameroon.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="products.html">New Arrivals</a>
+        <a href="products.html">Dresses</a>
+        <a href="products.html">Outerwear</a>
+        <a href="products.html">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#">Shipping Info</a>
+        <a href="#">Returns</a>
+        <a href="#">Size Guide</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Olive's Space. All rights reserved.</span>
+      <span>Yaoundé, Cameroon · ngassa.olive@gmail.com</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

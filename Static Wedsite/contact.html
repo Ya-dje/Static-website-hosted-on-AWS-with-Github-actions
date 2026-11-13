@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Olive's Space</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="contact.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo">OLIVE'S SPACE</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="products.html" class="nav-cta">Shop Now</a>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="products.html" class="mobile-cta">Shop Now</a>
+  </div>
+
+  <!-- CONTACT HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-inner fade-in">
+      <span class="section-tag">We'd love to hear from you</span>
+      <h1 class="contact-hero-title">Let's talk <em>style</em>.</h1>
+      <p class="contact-hero-sub">Whether it's a custom order, a wholesale inquiry, or just a hello — our team is here for you.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT BODY -->
+  <section class="contact-body">
+    <div class="contact-grid">
+
+      <!-- LEFT: Info -->
+      <div class="contact-info fade-in">
+        <h2 class="contact-info-title">Get in touch</h2>
+        <p class="contact-info-sub">Fill out the form or reach us directly through any of the channels below. We respond within 24 hours.</p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <div>
+              <span class="contact-card-label">Email</span>
+              <strong class="contact-card-value">hello@olivesspace.com</strong>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">☎</div>
+            <div>
+              <span class="contact-card-label">Phone</span>
+              <strong class="contact-card-value">+237 600 000 000</strong>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">⊙</div>
+            <div>
+              <span class="contact-card-label">Location</span>
+              <strong class="contact-card-value">Yaoundé, Cameroon</strong>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">◷</div>
+            <div>
+              <span class="contact-card-label">Hours</span>
+              <strong class="contact-card-value">Mon–Fri · 9am–6pm WAT</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-row">
+          <span class="contact-card-label">Follow Us</span>
+          <div class="socials">
+            <a href="#" class="social-btn">Instagram</a>
+            <a href="#" class="social-btn">Facebook</a>
+            <a href="#" class="social-btn">TikTok</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="contact-form-wrap fade-in">
+        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+          <h2 class="form-title">Send us a message</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="Your first name" required/>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Your last name" required/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="hello@example.com" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" placeholder="+237 ..."/>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject">
+              <option value="">Select a topic...</option>
+              <option>General Inquiry</option>
+              <option>Custom Order</option>
+              <option>Wholesale / B2B</option>
+              <option>Returns & Exchanges</option>
+              <option>Shipping & Delivery</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="Tell us what you're looking for, or ask us anything..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            Send Message &rarr;
+          </button>
+          <div class="form-success" id="formSuccess">
+            <span class="success-icon">✓</span>
+            <p>Message sent! We'll be in touch within 24 hours.</p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-header fade-in">
+      <span class="section-tag">FAQs</span>
+      <h2 class="section-title">Common questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item fade-in">
+        <h3 class="faq-q">Do you ship internationally?</h3>
+        <p class="faq-a">Yes! We ship to 15+ countries across Africa, Europe, and the Middle East. Shipping times vary by destination, typically 5–14 business days.</p>
+      </div>
+      <div class="faq-item fade-in">
+        <h3 class="faq-q">What is your return policy?</h3>
+        <p class="faq-a">We accept returns within 14 days of delivery for unworn, unwashed items in original packaging. Exchanges are always free.</p>
+      </div>
+      <div class="faq-item fade-in">
+        <h3 class="faq-q">Can I place a custom or bulk order?</h3>
+        <p class="faq-a">Absolutely. We welcome custom and wholesale orders. Please use the contact form above and select "Custom Order" or "Wholesale / B2B".</p>
+      </div>
+      <div class="faq-item fade-in">
+        <h3 class="faq-q">How do I find my size?</h3>
+        <p class="faq-a">Each product page includes a detailed size guide. If you're between sizes, we recommend sizing up. Our team is also happy to advise.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">OLIVE'S SPACE</a>
+        <p>Modern fashion for the confident woman. Quality pieces crafted for every occasion, shipped worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="products.html">New Arrivals</a>
+        <a href="products.html">Dresses</a>
+        <a href="products.html">Outerwear</a>
+        <a href="products.html">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#">Size Guide</a>
+        <a href="#">Returns</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Olive's Space. All rights reserved.</span>
+      <span>Yaoundé, Cameroon · hello@olivesspace.com</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const success = document.getElementById('formSuccess');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.style.display = 'none';
+        success.style.display = 'flex';
+        e.target.reset();
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
