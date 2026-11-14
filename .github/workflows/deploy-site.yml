@@ -1,0 +1,54 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "infra/**"
+      - "**.md"
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: deploy-site
+  cancel-in-progress: false
+
+env:
+  SITE_DIR: site
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v5
+
+      - name: Check the site folder
+        run: test -f "$SITE_DIR/index.html"
+
+      - name: Get temporary AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ vars.DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Upload assets (cached for 1 day)
+        run: |
+          aws s3 sync "$SITE_DIR" "s3://${{ vars.SITE_BUCKET }}" \
+            --delete --exclude "*.html" \
+            --cache-control "public,max-age=86400"
+
+      - name: Upload HTML pages (always revalidated)
+        run: |
+          aws s3 sync "$SITE_DIR" "s3://${{ vars.SITE_BUCKET }}" \
+            --delete --exclude "*" --include "*.html" \
+            --cache-control "no-cache"
+
+      - name: Clear the CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths "/*"
