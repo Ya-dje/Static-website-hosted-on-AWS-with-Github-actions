@@ -12,3 +12,8 @@ output "site_url" {
   description = "Public URL of the website."
   value       = "https://${aws_cloudfront_distribution.site.domain_name}"
 }
+
+output "deploy_role_arn" {
+  description = "Role the GitHub Actions workflow assumes."
+  value       = aws_iam_role.deploy.arn
+}

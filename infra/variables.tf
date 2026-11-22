@@ -9,3 +9,33 @@ variable "aws_region" {
   type        = string
   default     = "us-east-1"
 }
+
+variable "github_org" {
+  description = "GitHub user or organisation that owns the repository."
+  type        = string
+  default     = "Ya-dje"
+}
+
+variable "github_repo" {
+  description = "GitHub repository name."
+  type        = string
+  default     = "Static-website-hosted-on-AWS-with-Github-actions"
+}
+
+variable "github_branch" {
+  description = "Only workflows running on this branch can deploy."
+  type        = string
+  default     = "main"
+}
+
+variable "github_org_id" {
+  description = "Numeric ID of the GitHub account (appears in the OIDC sub claim)."
+  type        = string
+  default     = "194743586"
+}
+
+variable "github_repo_id" {
+  description = "Numeric ID of the GitHub repository (appears in the OIDC sub claim)."
+  type        = string
+  default     = "1456890531"
+}
